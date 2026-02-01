@@ -8,27 +8,28 @@ function isWeight(str) {
     return Number.isFinite(num) && num < 1000;
 }
 
-
 const colorInput = document.getElementById('color');
 const weightInput = document.getElementById('weight');
+const colorError = document.getElementById('colorError');
+const weightError = document.getElementById('weightError');
 const button1 = document.getElementById('button1');
 
 button1.addEventListener('click', 
     function makeDecal(){
         const color = colorInput.value;
         const weight = weightInput.value;
+        colorError.textContent = "";
+        weightError.textContent = "";
 
         /*Check if inputted values are valid*/
         if (isHexColor(color) == false) {
-            alert("Inputted color is invalid!");
+            colorError.textContent = "Invalid color!";
+        } else if (isWeight(weight) == false) {
+            weightError.textContent = "Invalid weight!";
+        } else {
+            /*Make the decal*/
+            alert("Making the decal");
         }
-        if (isWeight(weight) == false) {
-            alert("Inputted weight is invalid!");
-        }
-
-        alert("Making the decal");
-        
-        /*Make the decal*/
 
     }
 )
