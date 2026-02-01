@@ -5,7 +5,7 @@ function isHexColor(str) {
 
 function isWeight(str) {
     const num = Number(str);
-    return Number.isFinite(num) && num < 1000;
+    return Number.isFinite(num) && num < 1000 && num > 0;
 }
 
 const colorInput = document.getElementById('color');
