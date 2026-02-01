@@ -16,7 +16,7 @@ function drawCircle(color, weight) {
     ctx.fill();
 
     ctx.fillStyle = "#000000";
-    ctx.font = "24px Trebuchet MS";
+    ctx.font = "300px Trebuchet MS";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(weight, 200, 200);
@@ -44,6 +44,9 @@ button1.addEventListener('click',
         } else if (isWeight(weight) == false || weight == "") {
             weightError.textContent = "Invalid weight!";
         } else {
+            for (i = 0; i < weight.size; i++) {
+                if (weight[i] == "1") weight[i] = "I";
+            }
             drawCircle(color, weight);
         }
 
