@@ -16,15 +16,15 @@ const button1 = document.getElementById('button1');
 
 button1.addEventListener('click', 
     function makeDecal(){
-        const color = colorInput.value;
-        const weight = weightInput.value;
+        const color = colorInput.value.trim();
+        const weight = weightInput.value.trim();
         colorError.textContent = "";
         weightError.textContent = "";
 
         /*Check if inputted values are valid*/
         if (isHexColor(color) == false) {
             colorError.textContent = "Invalid color!";
-        } else if (isWeight(weight) == false) {
+        } else if (isWeight(weight) == false || weight == "") {
             weightError.textContent = "Invalid weight!";
         } else {
             /*Make the decal*/
