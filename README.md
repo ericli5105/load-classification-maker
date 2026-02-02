@@ -1,2 +1,2 @@
 # military-load-classification-maker
-Short program to make military load classification decals.
+Small webpage to create military load classification decals.
