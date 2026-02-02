@@ -9,6 +9,8 @@ function isWeight(str) {
 }
 
 function drawCircle(color, weight) {
+    const modifiedWeight = weight.replace(/1/g, "I");
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(200, 200, 180, 0, Math.PI * 2);
@@ -16,10 +18,14 @@ function drawCircle(color, weight) {
     ctx.fill();
 
     ctx.fillStyle = "#000000";
-    ctx.font = "300px Trebuchet MS";
+    if (weight < 100) {
+        ctx.font = "bold 245px 'Trebuchet MS', Helvetica, Arial";
+    } else {
+        ctx.font = "bold 200px 'Trebuchet MS', Helvetica, Arial";
+    }
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(weight, 200, 200);
+    ctx.fillText(modifiedWeight, 200, 200+18);
 }
 
 const colorInput = document.getElementById('color');
@@ -44,9 +50,6 @@ button1.addEventListener('click',
         } else if (isWeight(weight) == false || weight == "") {
             weightError.textContent = "Invalid weight!";
         } else {
-            for (i = 0; i < weight.size; i++) {
-                if (weight[i] == "1") weight[i] = "I";
-            }
             drawCircle(color, weight);
         }
 

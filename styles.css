@@ -4,20 +4,41 @@ body{
 
 h1 {
     color:white;
+    font-family: "Trebuchet MS", Helvetica, Arial;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
 }
 
 p {
 	color:white;
+    font-family: "Trebuchet MS", Helvetica, Arial;
+    max-width: 86ch;
+    margin: 0 auto;
+    text-align: center;
 }
 
 label {
     color:white;
+    font-family: "Trebuchet MS", Helvetica, Arial;
+    display: block;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
 }
 
 .error {
     color:red;
     font-size: 0.9em;
-    /* margin: 4px 0 10px */
+    margin: 4px 0 10px
 }
 
 .invalid {
@@ -25,7 +46,9 @@ label {
 }
 
 canvas {
-    border: 1px solid #ccc;
+    border: none;
     display: block;
     margin-top: 10px;
+    margin: 0 auto;
+
 }

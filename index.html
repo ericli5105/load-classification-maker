@@ -3,25 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Load Classification Maker</title>
+        <title>Military Load Classification Maker</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
 
     <body>
         <header>
-            <h1>Load Classification Maker</h1>
+            <h1>
+            Military Load Classification Maker
+            </h1>
         </header>
 
         <main>
-            <p>Input values to create the decal. Use hexadecimal for color. Weights have
-                to be less than 1000.
-            </p>
+            <p>By default, outputted numbers are in Bold Trebuchet MS.
+            Font color is black. Font sizes will be 245px for weights under 100. Otherwise, 
+            it is 200px. If you are not using solid yellow, consider using a brighter color.
+            </p><br><br>
+            <p>
+            Input below to create the decal. Use hexadecimal for color. Weight inputs can range from 1 to 999.
+            </p><br>
 
-            <label for="color">Enter the background color:</label>
+            <label for="color">Background color:</label>
             <input type="text" id="color" placeholder="e.g. #f2c300">
             <p id="colorError" class="error"></p>
 
-            <label for="weight">Enter vehicle tonnage:</label>
+            <label for="weight">Vehicle tonnage:</label>
             <input type="text" id="weight" placeholder="e.g. 15">
             <p id="weightError" class="error"></p>
 
